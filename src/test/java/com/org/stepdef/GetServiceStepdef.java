@@ -35,6 +35,12 @@ public void status_should_be(int arg1)  {
 public void response_should_have_different_user_parameters()  {
 	System.out.println(response.body().jsonPath().getString("Order"));
    Assert.assertTrue(response.body().jsonPath().getString("Order").contains("398481"));
+   Assert.assertTrue(response.body().jsonPath().getString("Level").equals("1"));
+   Assert.assertTrue(response.body().jsonPath().getString("Code").equals("A"));
+   Assert.assertTrue(response.body().jsonPath().getString("Description").contains("AGRICULTURE, FORESTRY AND FISHING"));
+   Assert.assertTrue(response.body().jsonPath().getString("Description1").contains("This section includes the exploitation of vegetal and animal natural resources, comprising the activities of growing of crops, raising and breeding of animals, harvesting of timber and other plants, animals or animal products from a farm or their natural habitats."));
+   Assert.assertTrue(response.body().jsonPath().getString("Reference").contains("A"));
+   
 }
 	
 }
