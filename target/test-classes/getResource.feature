@@ -1,10 +1,10 @@
 
-@tag
+@Deutsche
 Feature: get the resources
 
-  @tag1
-  Scenario: Title of your scenario
-    Given get resources service called
+  @Deutsche
+  Scenario: Validate get Nace Details service
+    Given Get nace details order is called
     Then Status should be 200
     And  response should have different user parameters
 

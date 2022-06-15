@@ -1,17 +1,20 @@
 package com.org.stepdef;
 
+import org.testng.Assert;
+
 import com.org.services.GetNaceDetails;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.restassured.response.Response;
-import junit.framework.Assert;
+
+
 
 public class GetServiceStepdef {
 	
 	private Response response;
 
-@Given("^get resources service called$")
+@Given("^Get nace details order is called$")
 public void get_resources_service_called() {
 	
     System.out.println("get  resources called");
@@ -21,7 +24,6 @@ public void get_resources_service_called() {
     System.out.println(response.getStatusCode());
 }
 
-@SuppressWarnings("deprecation")
 @Then("^Status should be (\\d+)$")
 public void status_should_be(int arg1)  {
    System.out.println(" status code should be 200");
