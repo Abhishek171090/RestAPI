@@ -17,10 +17,6 @@ public class Stubs {
 	
 	public static  WireMockServer server= new WireMockServer(8080);
 	
-	@Before
-	public void stub() {
-		System.out.println("stub called");
-	}
 	
 	@Before
 	public void startServer() throws JsonProcessingException, IOException {
